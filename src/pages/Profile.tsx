@@ -164,16 +164,29 @@ const Profile = () => {
                 </CardContent>
               </Card>
 
-              <Link to="/recommendations">
-                <Button 
-                  variant="premium" 
-                  size="lg" 
-                  className="w-full"
-                  disabled={!sector || !size || !location}
-                >
-                  Analyser les données publiques
-                </Button>
-              </Link>
+              <div className="space-y-4">
+                <Link to="/carbon-tracker" className="block">
+                  <Button
+                    variant="premium"
+                    size="lg"
+                    className="w-full"
+                    disabled={!sector || !size || !location}
+                  >
+                    Utiliser le Carbon Data Tracker (Optionnel)
+                  </Button>
+                </Link>
+                
+                <Link to="/recommendations" className="block">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full"
+                    disabled={!sector || !size || !location}
+                  >
+                    Passer directement à l'analyse IA
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             {/* Preview Column */}

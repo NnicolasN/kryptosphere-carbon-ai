@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import CarbonTracker from "./pages/CarbonTracker";
+import PreBilan from "./pages/PreBilan";
 import Recommendations from "./pages/Recommendations";
 import Roadmap from "./pages/Roadmap";
 import NotFound from "./pages/NotFound";
@@ -20,6 +22,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/carbon-tracker" element={<CarbonTracker />} />
+          <Route path="/pre-bilan" element={<PreBilan />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/roadmap" element={<Roadmap />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
