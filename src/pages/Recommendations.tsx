@@ -5,6 +5,9 @@ import { ArrowDown, ArrowRight, Sparkles, TrendingDown, Link as LinkIcon } from 
 import { Link } from "react-router-dom";
 
 const Recommendations = () => {
+  // Info banner about pre-bilan
+  const hasPreBilan = true; // This would come from state/context in real app
+
   const leverCategories = [
     {
       title: "Réduire",
@@ -86,6 +89,17 @@ const Recommendations = () => {
     <div className="min-h-screen bg-secondary/30">
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-7xl mx-auto">
+          {/* Pre-bilan info banner */}
+          {hasPreBilan && (
+            <Card className="mb-6 bg-accent/10 border-accent">
+              <CardContent className="pt-6">
+                <p className="text-sm text-muted-foreground">
+                  ✓ Les leviers recommandés ont été ajustés à partir de votre pré-bilan carbone automatique.
+                </p>
+              </CardContent>
+            </Card>
+          )}
+
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
               Leviers de décarbonation identifiés par l'IA
