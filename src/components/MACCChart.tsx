@@ -310,7 +310,7 @@ const MACCChart = () => {
             Marginal Abatement Cost Curve (MACC)
           </CardTitle>
           <p className="text-sm text-muted-foreground">
-            Classement des leviers par coût marginal croissant – inspiré McKinsey & KPMG
+            Classement des leviers par coût marginal croissant
           </p>
         </CardHeader>
         <CardContent>
